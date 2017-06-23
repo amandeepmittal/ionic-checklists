@@ -16,6 +16,7 @@ export class ListPage {
   }
 
   onUncheckAllItems() {}
+
   onAddItem() {
     let alert = this.alertCtrl.create({
       title: 'New Item?',
@@ -39,9 +40,11 @@ export class ListPage {
     });
     alert.present();
   }
+
   onToggleItem(item) {
     this.list.onToggleItem(item);
   }
+
   onRenameItem(item) {
     let alert = this.alertCtrl.create({
       title: 'Rename an item?',
@@ -61,6 +64,7 @@ export class ListPage {
     });
     alert.present();
   }
+
   onRemoveItem(item) {
     this.list.onRemoveItem(item);
   }
