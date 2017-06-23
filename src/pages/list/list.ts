@@ -40,7 +40,25 @@ export class ListPage {
     alert.present();
   }
   onToggleItem(item) {}
-  onRenameItem(item) {}
+  onRenameItem(item) {
+    let alert = this.alertCtrl.create({
+      title: 'Rename an item?',
+      message: 'Enter the new name for itme',
+      inputs: [
+        { name: 'name' }
+      ],
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Save',
+          handler: dataService => {
+            this.list.onRenameItem(item, dataService.item);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
   onRemoveItem(item) {}
 
 }
