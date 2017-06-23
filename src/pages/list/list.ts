@@ -1,4 +1,4 @@
-import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController, IonicPage, NavController, NavParams, reorderArray } from 'ionic-angular';
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
@@ -75,4 +75,7 @@ export class ListPage {
     this.list.onRemoveItem(item);
   }
 
+  onReorderItems(indexes) {
+    this.list.items = reorderArray(this.list.items, indexes);
+  }
 }

@@ -16,7 +16,7 @@
 
 
 <ion-content padding>
-  <ion-list no-lines>
+  <ion-list no-lines reorder="true" (ionItemReorder)="onReorderItems($event)">
     <ion-item-sliding *ngFor="let item of list.items">
       <ion-item>
         <ion-label>{{item.title}}</ion-label>
