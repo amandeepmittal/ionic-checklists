@@ -39,7 +39,7 @@ export class ListPage {
         {
           text: 'Add',
           handler: dataService => {
-            this.list.addItem(dataService.name);
+            this.list.onAddItem(dataService.name);
           }
         }
       ]
