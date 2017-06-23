@@ -23,10 +23,10 @@
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="lavendarBlue" (click)="onRenameItem(item, itemSliding)">
+        <button ion-button icon-only color="lavendarBlue" (click)="onRenameItem(item, itemSliding)">
           <ion-icon name="create"></ion-icon>
         </button>
-        <button ion-button color="danger" (click)="onRemoveItem(item)">
+        <button ion-button icon-only color="danger" (click)="onRemoveItem(item)">
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
