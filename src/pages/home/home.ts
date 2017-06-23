@@ -18,8 +18,8 @@ export class HomePage {
 
   onAddNewList() {
     let alert = this.alertCtrl.create({
-      title: 'New List',
-      message: 'Enter the name of your list',
+      title: 'A New CheckList',
+      message: 'Enter a name for Your List',
       inputs: [
         { name: 'name' }
       ],
@@ -50,8 +50,8 @@ export class HomePage {
 
   onRenameList(list) {
     let alert = this.alertCtrl.create({
-      title: 'Rename List',
-      message: 'Enter the new name of your list',
+      title: 'Rename Your CheckList',
+      message: 'Enter a NEW name of Your List',
       inputs: [
         { name: 'name' }
       ],
@@ -69,6 +69,7 @@ export class HomePage {
         }
       ]
     });
+    alert.present();
   }
   onRemoveList(list) {
     let index = this.lists.indexOf(list);
