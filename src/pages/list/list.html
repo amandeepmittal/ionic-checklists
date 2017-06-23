@@ -17,13 +17,13 @@
 
 <ion-content padding>
   <ion-list no-lines reorder="true" (ionItemReorder)="onReorderItems($event)">
-    <ion-item-sliding *ngFor="let item of list.items">
+    <ion-item-sliding *ngFor="let item of list.items" #itemSliding>
       <ion-item>
         <ion-label>{{item.title}}</ion-label>
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="lavendarBlue" (click)="onRenameItem(item)">
+        <button ion-button color="lavendarBlue" (click)="onRenameItem(item, itemSliding)">
           <ion-icon name="clipboard"></ion-icon>
           Edit
         </button>

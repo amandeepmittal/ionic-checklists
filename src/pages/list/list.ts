@@ -1,4 +1,4 @@
-import { AlertController, IonicPage, NavController, NavParams, reorderArray } from 'ionic-angular';
+import { AlertController, IonicPage, ItemSliding, NavController, NavParams, reorderArray } from 'ionic-angular';
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
@@ -51,7 +51,7 @@ export class ListPage {
     this.list.onToggleItem(item);
   }
 
-  onRenameItem(item) {
+  onRenameItem(item, itemSliding: ItemSliding) {
     let alert = this.alertCtrl.create({
       title: 'Rename an item?',
       message: 'Enter the new name for itme',
@@ -64,6 +64,7 @@ export class ListPage {
           text: 'Save',
           handler: dataService => {
             this.list.onRenameItem(item, dataService.item);
+            itemSliding.close();
           }
         }
       ]
