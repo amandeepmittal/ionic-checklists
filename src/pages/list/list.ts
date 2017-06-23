@@ -1,4 +1,4 @@
-import { AlertController, IonicPage, ItemSliding, NavController, NavParams, reorderArray } from 'ionic-angular';
+import { AlertController, IonicPage, ItemSliding, NavController, NavParams, ToastController, reorderArray } from 'ionic-angular';
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
@@ -11,14 +11,21 @@ import { DataProvider } from '../../providers/data/data';
 export class ListPage {
   list: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public dataService: DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public dataService: DataProvider, public toastCtrl: ToastController) {
     this.list = this.navParams.get('list');
   }
 
   onUncheckAllItems() {
+    const toast = this.toastCtrl.create({
+      message: 'You list was reset.',
+      duration: 1800,
+      position: 'bottom'
+    });
+
     this.list.items.forEach(item => {
       if(item.checked) {
         this.list.onToggleItem(item);
+        toast.present();
       }
     });
   }
