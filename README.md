@@ -1,26 +1,22 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# CheckLists
+_repo name_: ionic-checklists
 
-## How to use this template
+## About CheckLists
+It will contain items that could checked off as an indication to mark them done. There are lists and each list  contain any number of items. Any list can be edited or deleted permanently by the user. A list can be restart by the user to repeat the same procedure of doing things (represented as items in the list) for next time. There are tasks we need to perform every time, like if you are a traveller, you'd want to perform/pack things that necessary for every journey. Another one, is weekly grossing. You need to buy a same things every week/month and if you have a list that holds items, you don't have to remember everything and there are no chances you will forget to buy anything when you are the supermarkter. The idea of this app is of a repeatable to do list.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## User Stories
+As a user, I
+- [ ] can create any number of lists
+- [ ] can add any number of individual items to any list
+- [ ] can mark an item in the list to be complete or incomplete
+- [ ] can reset a checklist at any time
+- [ ] can edit or delete a list
+- [ ] can edit or delete an item from any list
+- [ ] can view my lists after opening the app next time
+**Misc**
+- [ ] as a first user, app must show an intro tutorial 
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+---
 
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+## License
+MIT
