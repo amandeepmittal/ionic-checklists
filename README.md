@@ -13,6 +13,7 @@ As a user, I
 - [ ] can edit or delete a list
 - [ ] can edit or delete an item from any list
 - [ ] can view my lists after opening the app next time
+- [ ] can reorder checklists
 **Misc**
 - [ ] as a first user, app must show an intro tutorial 
 
