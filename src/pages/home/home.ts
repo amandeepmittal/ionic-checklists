@@ -41,11 +41,30 @@ export class HomePage {
     alert.present();
   }
 
-  onViewList(list) {
+  onViewList(list) {}
 
+  onRenameList(list) {
+    let alert = this.alertCtrl.create({
+      title: 'Rename List',
+      message: 'Enter the new name of your list',
+      inputs: [
+        { name: 'name' }
+      ],
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: 'Save',
+          handler: dataService => {
+            let index = this.lists.indexOf(list);
+            if(index > -1) {
+              this.lists[index].onSetTitle(dataService.name);
+              this.onSave();
+            }
+          }
+        }
+      ]
+    });
   }
-
-  onRenameList(list) {}
   onRemoveList(list) {}
   onSave() {}
 }
