@@ -65,6 +65,12 @@ export class HomePage {
       ]
     });
   }
-  onRemoveList(list) {}
+  onRemoveList(list) {
+    let index = this.lists.indexOf(list);
+    if( index > -1) {
+      this.lists.splice(index, 1);
+      this.onSave();
+    }
+  }
   onSave() {}
 }
