@@ -40,7 +40,7 @@ export class ListPage {
     alert.present();
   }
   onToggleItem(item) {
-
+    this.list.onToggleItem(item);
   }
   onRenameItem(item) {
     let alert = this.alertCtrl.create({
