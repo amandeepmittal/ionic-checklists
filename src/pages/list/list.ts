@@ -63,7 +63,7 @@ export class ListPage {
         {
           text: 'Save',
           handler: dataService => {
-            this.list.onRenameItem(item, dataService.item);
+            this.list.onRenameItem(item, dataService.name);
             itemSliding.close();
           }
         }
