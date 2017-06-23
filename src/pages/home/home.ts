@@ -1,4 +1,4 @@
-import { AlertController, ItemSliding, NavController, Platform } from 'ionic-angular';
+import { AlertController, ItemSliding, NavController, Platform, reorderArray } from 'ionic-angular';
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
@@ -80,4 +80,8 @@ export class HomePage {
     }
   }
   onSave() {}
+
+  onReorderItems(indexes) {
+    this.lists = reorderArray(this.lists, indexes);
+  }
 }
