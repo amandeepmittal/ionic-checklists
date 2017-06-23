@@ -23,11 +23,13 @@
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="light" (click)="onRenameItem(item)">
-          <ion-icon name="clipboard"> Edit</ion-icon>
+        <button ion-button color="lavendarBlue" (click)="onRenameItem(item)">
+          <ion-icon name="clipboard"></ion-icon>
+          Edit
         </button>
         <button ion-button color="danger" (click)="onRemoveItem(item)">
-          <ion-icon name="trash"> Delete</ion-icon>
+          <ion-icon name="trash"></ion-icon>
+          Delete
         </button>
       </ion-item-options>
     </ion-item-sliding>
