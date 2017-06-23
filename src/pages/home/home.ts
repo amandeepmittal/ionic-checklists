@@ -3,6 +3,7 @@ import { AlertController, NavController, Platform } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
 import { ListModel } from "../../models/list.model";
+import { ListPage } from '../list/list';
 
 @Component({
   selector: 'page-home',
@@ -41,7 +42,11 @@ export class HomePage {
     alert.present();
   }
 
-  onViewList(list) {}
+  onViewList(list) {
+    this.navCtrl.push(ListPage, {
+      list: list
+    });
+  }
 
   onRenameList(list) {
     let alert = this.alertCtrl.create({
