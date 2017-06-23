@@ -15,7 +15,13 @@ export class ListPage {
     this.list = this.navParams.get('list');
   }
 
-  onUncheckAllItems() {}
+  onUncheckAllItems() {
+    this.list.items.forEach(item => {
+      if(item.checked) {
+        this.list.onToggleItem(item);
+      }
+    });
+  }
 
   onAddItem() {
     let alert = this.alertCtrl.create({
