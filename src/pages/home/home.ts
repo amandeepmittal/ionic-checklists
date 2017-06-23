@@ -1,4 +1,4 @@
-import { AlertController, NavController, Platform } from 'ionic-angular';
+import { AlertController, ItemSliding, NavController, Platform } from 'ionic-angular';
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
@@ -48,7 +48,7 @@ export class HomePage {
     });
   }
 
-  onRenameList(list) {
+  onRenameList(list, listItemSliding: ItemSliding) {
     let alert = this.alertCtrl.create({
       title: 'Rename Your CheckList',
       message: 'Enter a NEW name of Your List',
@@ -64,6 +64,7 @@ export class HomePage {
             if(index > -1) {
               this.lists[index].onSetTitle(dataService.name);
               this.onSave();
+              listItemSliding.close();
             }
           }
         }

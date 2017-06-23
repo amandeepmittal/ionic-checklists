@@ -13,17 +13,18 @@
 
 <ion-content padding>
   <ion-list no-lines>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let list of lists" #listItemSliding>
       <button ion-item (click)="onViewList(list)">
-        <h2>List Title</h2>
-        <p>0 items</p>
+        <h2>{{list.title}}</h2>
+        <p>{{list.items.length}} Items</p>
       </button>
       <ion-item-options>
-        <button ion-button icon-only color="light" (click)="onRenameList(list)">
-          <ion-icon name="clipbaord"> Edit</ion-icon>
+        <button ion-button color="lavendarBlue" (click)="onRenameList(list, listItemSliding)">
+          <ion-icon name="clipboard"></ion-icon>
+          Edit
         </button>
         <button ion-button icon-only color="danger" (click)="onRemoveList(list)">
-          <ion-icon name="trash"> Delete</ion-icon>
+          <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
     </ion-item-sliding>
