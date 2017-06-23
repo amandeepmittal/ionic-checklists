@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { Component } from '@angular/core';
 
 /**
  * Generated class for the ListPage page.
@@ -17,8 +18,10 @@ export class ListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListPage');
-  }
+  onUncheckAllItems() {}
+  onAddItem() {}
+  onToggleItem(item) {}
+  onRenameItem(item) {}
+  onRemoveItem(item) {}
 
 }
