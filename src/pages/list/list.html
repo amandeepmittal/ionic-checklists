@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="lavendarBlue">
     <ion-title>
-      CHECK LIST TITLE
+      {{list.title}}
       </ion-title>
       <ion-buttons end>
       <button ion-button icon-only (click)="onUncheckAllItems()">
@@ -19,16 +19,16 @@
 
 <ion-content padding>
   <ion-list no-lines>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of list.items">
       <ion-item>
-        <ion-label>ITEM NAME</ion-label>
+        <ion-label>{{item.title}}</ion-label>
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
       <ion-item-options>
-        <button ion-button icon-only color="light" (click)="onRenameItem(item)">
+        <button ion-button color="light" (click)="onRenameItem(item)">
           <ion-icon name="clipboard"> Edit</ion-icon>
         </button>
-        <button ion-button icon-only color="danger" (click)="onRemoveItem(item)">
+        <button ion-button color="danger" (click)="onRemoveItem(item)">
           <ion-icon name="trash"> Delete</ion-icon>
         </button>
       </ion-item-options>
