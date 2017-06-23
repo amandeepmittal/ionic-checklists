@@ -11,4 +11,8 @@ export class HomePage {
 
   }
 
+  onAddNewList() {}
+  onViewList(list: any) {}
+  onRenameList(list: any) {}
+  onRemoveList(list: any) {}
 }

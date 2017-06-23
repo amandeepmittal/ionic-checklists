@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="lavendarBlue">
     <ion-title>
-      Ionic Blank
+      CheckLists
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onAddNewList()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list no-lines>
+    <ion-item-sliding>
+      <button ion-item (click)="onViewList(list)">
+        <h2>List Title</h2>
+        <p>0 items</p>
+      </button>
+      <ion-item-options>
+        <button ion-button icon-only color="light" (click)="onRenameList(list)">
+          <ion-icon name="clipbaord"> Edit</ion-icon>
+        </button>
+        <button ion-button icon-only color="danger" (click)="onRemoveList(list)">
+          <ion-icon name="trash"> Delete</ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
