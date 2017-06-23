@@ -39,7 +39,9 @@ export class ListPage {
     });
     alert.present();
   }
-  onToggleItem(item) {}
+  onToggleItem(item) {
+
+  }
   onRenameItem(item) {
     let alert = this.alertCtrl.create({
       title: 'Rename an item?',
@@ -59,6 +61,8 @@ export class ListPage {
     });
     alert.present();
   }
-  onRemoveItem(item) {}
+  onRemoveItem(item) {
+    this.list.onRemoveItem(item);
+  }
 
 }
