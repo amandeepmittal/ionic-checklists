@@ -15,7 +15,7 @@
 <ion-content padding>
   <ion-list no-lines reorder="true" (ionItemReorder)="onReorderItems($event)">
     <ion-item-sliding *ngFor="let list of lists" #listItemSliding>
-      <button ion-item (click)="onViewList(list)">
+      <button ion-item class="home-item" (click)="onViewList(list)">
         <h2>{{list.title}}</h2>
         <p>{{list.items.length}} Items</p>
       </button>
