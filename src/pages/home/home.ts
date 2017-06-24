@@ -2,8 +2,10 @@ import { AlertController, ItemSliding, NavController, Platform, reorderArray } f
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
+import { IntroPage } from '../intro/intro';
 import { ListModel } from './../../models/list.model';
 import { ListPage } from '../list/list';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -12,12 +14,19 @@ import { ListPage } from '../list/list';
 export class HomePage {
   lists: ListModel[] = [];
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform, public storage: Storage) {
 
   }
 
   ionViewDidLoad() {
     this.platform.ready().then(() => {
+      this.storage.get('introShown').then((result) => {
+        if(!result) {
+          this.storage.set('introShown', true);
+          this.navCtrl.setRoot(IntroPage);
+        }
+      });
+
       this.dataService.getData().then((lists) => {
 
         let savedLists: any = false;
