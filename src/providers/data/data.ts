@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+
+import { Injectable } from '@angular/core';
 
 /*
   Generated class for the DataProvider provider.
@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataProvider {
 
-  constructor(public http: Http) {
+  constructor() {
     console.log('Hello DataProvider Provider');
   }
 
