@@ -3,7 +3,7 @@ import { AlertController, ItemSliding, NavController, Platform, reorderArray } f
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
 import { IntroPage } from '../intro/intro';
-import { ListModel } from './../../models/list.model';
+import { ListModel } from '../../models/list.model';
 import { ListPage } from '../list/list';
 import { Storage } from '@ionic/storage';
 
