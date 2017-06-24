@@ -1,6 +1,7 @@
 <ion-header>
-  <ion-navbar color="lavendarBlue">
+  <ion-navbar color="navBar">
     <ion-title>
+      <ion-icon name="md-checkbox-outline"></ion-icon>
       CheckLists
     </ion-title>
     <ion-buttons end>
@@ -19,7 +20,7 @@
         <p>{{list.items.length}} Items</p>
       </button>
       <ion-item-options>
-        <button ion-button icon-only color="lavendarBlue" (click)="onRenameList(list, listItemSliding)">
+        <button ion-button icon-only color="editSwipe" (click)="onRenameList(list, listItemSliding)">
           <ion-icon name="md-create"></ion-icon>
         </button>
         <button ion-button icon-only color="danger" (click)="onRemoveList(list)">

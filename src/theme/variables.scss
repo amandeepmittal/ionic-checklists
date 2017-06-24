@@ -39,7 +39,8 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  lavendarBlue: #715aff
+  navBar: #102f4c,
+  editSwipe: #3294ef
 );
 
 
@@ -47,14 +48,21 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
-
+$list-ios-activated-background-color: #3294ef;
+$checkbox-ios-icon-size : 19px;
+$checkbox-ios-icon-background-color-on:  #102f4c;
+$checkbox-ios-icon-background-color-off: #f4f4f4;
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$list-md-activated-background-color: #3294ef;
+$checkbox-md-icon-size : 19px;
+$checkbox-md-icon-background-color-on:  #102f4c;
+$checkbox-md-icon-border-color-on:  #102f4c;
+$checkbox-md-icon-background-color-off: #f4f4f4;
+$scheckbox-md-icon-border-color-off: #f4f4f4;
 
 
 // App Windows Variables
