@@ -16,7 +16,7 @@ As a user, I
 - [X] can reorder checklists
 
 **Misc**
-- [ ] as a first user, app must show an intro tutorial 
+- [X] as a first user, app must show an intro tutorial 
 
 ---
 
