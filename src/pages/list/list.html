@@ -18,7 +18,7 @@
 <ion-content padding>
   <ion-list no-lines reorder="true" (ionItemReorder)="onReorderItems($event)">
     <ion-item-sliding *ngFor="let item of list.items" #itemSliding>
-      <ion-item>
+      <ion-item class="list-item">
         <ion-label>{{item.title}}</ion-label>
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
