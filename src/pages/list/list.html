@@ -23,7 +23,7 @@
         <ion-checkbox [checked]="item.checked" (click)="onToggleItem(item)"></ion-checkbox>
       </ion-item>
       <ion-item-options>
-        <button ion-button icon-only color="lavendarBlue" (click)="onRenameItem(item, itemSliding)">
+        <button ion-button icon-only color="editSwipe" (click)="onRenameItem(item, itemSliding)">
           <ion-icon name="md-create"></ion-icon>
         </button>
         <button ion-button icon-only color="danger" (click)="onRemoveItem(item)">
