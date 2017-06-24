@@ -2,7 +2,7 @@ import { AlertController, ItemSliding, NavController, Platform, reorderArray } f
 
 import { Component } from '@angular/core';
 import { DataProvider } from '../../providers/data/data';
-import { ListModel } from "../../models/list.model";
+import { ListModel } from './../../models/list.model';
 import { ListPage } from '../list/list';
 
 @Component({
@@ -14,6 +14,29 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform) {
 
+  }
+
+  ionViewDidLoad() {
+    this.platform.ready().then(() => {
+      this.dataService.getData().then((lists) => {
+
+        let savedLists: any = false;
+
+        if(typeof(lists) != 'undefined') {
+          savedLists = JSON.parse(lists);
+        }
+
+        if(savedLists) {
+          savedLists.forEach(savedList => {
+            let loadList = new ListModel(savedList.title, savedList.items);
+            this.lists.push(loadList);
+            loadList.list.subscribe(update => {
+              this.onSave();
+            });
+          });
+        }
+      });
+    });
   }
 
   onAddNewList() {
@@ -79,7 +102,9 @@ export class HomePage {
       this.onSave();
     }
   }
-  onSave() {}
+  onSave() {
+    this.dataService.save(this.lists);
+  }
 
   onReorderItems(indexes) {
     this.lists = reorderArray(this.lists, indexes);

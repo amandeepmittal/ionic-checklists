@@ -1,18 +1,30 @@
 import 'rxjs/add/operator/map';
 
 import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
-/*
-  Generated class for the DataProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 @Injectable()
 export class DataProvider {
 
-  constructor() {
-    console.log('Hello DataProvider Provider');
+  constructor(public storage: Storage) {}
+
+  getData() {
+    return this.storage.get('lists');
+  }
+
+  save(data) {
+    let saveData = [];
+
+    // remove observables
+    data.forEach(list => {
+      saveData.push({
+        title: list.title,
+        items: list.items
+      });
+    });
+
+    let newData = JSON.stringify(saveData);
+    this.storage.set('lists', newData);
   }
 
 }

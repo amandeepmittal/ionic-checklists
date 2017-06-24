@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DataProvider } from '../providers/data/data';
 import { HomePage } from '../pages/home/home';
 import { IntroPage } from '../pages/intro/intro';
+import { IonicStorageModule } from '@ionic/storage';
 import { ListPage } from '../pages/list/list';
 import { MyApp } from './app.component';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,11 @@ import { StatusBar } from '@ionic-native/status-bar';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '_ionicCheckLists',
+      driverOrder: ['sqlite', 'indexeddb', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
