@@ -18,6 +18,10 @@ As a user, I
 **Misc**
 - [X] as a first user, app must show an intro tutorial 
 
+## App Screenshots
+
+![checklist1](http://i.imgur.com/SqpSdzx.gif)
+
 ---
 
 ## License
