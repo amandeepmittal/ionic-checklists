@@ -6,14 +6,14 @@ It will contain items that could checked off as an indication to mark them done.
 
 ## User Stories
 As a user, I
-- [ ] can create any number of lists
-- [ ] can add any number of individual items to any list
-- [ ] can mark an item in the list to be complete or incomplete
-- [ ] can reset a checklist at any time
-- [ ] can edit or delete a list
-- [ ] can edit or delete an item from any list
-- [ ] can view my lists after opening the app next time
-- [ ] can reorder checklists
+- [X] can create any number of lists
+- [X] can add any number of individual items to any list
+- [X] can mark an item in the list to be complete or incomplete
+- [X] can reset a checklist at any time
+- [X] can edit or delete a list
+- [X] can edit or delete an item from any list
+- [X] can view my lists after opening the app next time
+- [X] can reorder checklists
 **Misc**
 - [ ] as a first user, app must show an intro tutorial 
 
