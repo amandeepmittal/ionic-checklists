@@ -19,7 +19,8 @@ export class DataProvider {
     data.forEach(list => {
       saveData.push({
         title: list.title,
-        items: list.items
+        items: list.items,
+        creation: list.creation
       });
     });
 
