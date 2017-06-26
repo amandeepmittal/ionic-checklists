@@ -23,6 +23,7 @@
       <button ion-item class="home-item" (click)="onViewList(list)">
         <h2>{{list.title}}</h2>
         <p>{{list.items.length}} Items</p>
+        <span class="custom-creation-date">{{list.creation | date:'dd MMM, yyyy'}}</span>
       </button>
       <ion-item-options>
         <button ion-button icon-only color="editSwipe" (click)="onRenameList(list, listItemSliding)">
