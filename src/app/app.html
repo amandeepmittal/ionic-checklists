@@ -1,1 +1,17 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="nav">
+  <ion-header>
+    <ion-toolbar color="navBar">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item icon-left color="light" (click)="onLoad(rootPage)">
+        <ion-icon name="md-home"></ion-icon>
+        All Lists
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #nav [root]="rootPage"></ion-nav>
