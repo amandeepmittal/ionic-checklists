@@ -3,9 +3,10 @@
     <name>CheckLists</name>
     <description>An awesome repetable checklists app.</description>
     <author email="amanmittal.email@gmail.com" href="http://amandeepmittal.github.io/blog">Aman Mittal</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.0.10:8100" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
+    <allow-navigation href="http://192.168.0.10:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
