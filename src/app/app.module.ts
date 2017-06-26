@@ -1,6 +1,7 @@
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import { AboutPage } from "../pages/about/about";
 import { BrowserModule } from '@angular/platform-browser';
 import { DataProvider } from '../providers/data/data';
 import { HomePage } from '../pages/home/home';
@@ -16,7 +17,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     MyApp,
     HomePage,
     IntroPage,
-    ListPage
+    ListPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     MyApp,
     HomePage,
     IntroPage,
-    ListPage
+    ListPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
