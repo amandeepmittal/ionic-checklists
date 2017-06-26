@@ -4,7 +4,7 @@ export class ListModel {
   list: any;
   listObserver: any;
 
-  constructor(public title: string, public items: any[]) {
+  constructor(public title: string, public items: any[], public creation: String = new Date().toISOString()) {
     this.items = items;
 
     this.list = Observable.create(observer => {
