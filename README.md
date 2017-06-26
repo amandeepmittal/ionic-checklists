@@ -17,6 +17,7 @@ As a user, I
 
 **Misc**
 - [X] as a first user, app must show an intro tutorial 
+- [X] save new list creation date stamp
 
 ## App Screenshots
 
