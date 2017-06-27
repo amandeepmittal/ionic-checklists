@@ -1,6 +1,10 @@
 # CheckLists
 _repo name_: ionic-checklists
 
+## DEMO
+Download Apk on your android device from [here](https://www.dropbox.com/s/egmn0bhl28eatcg/CheckLists.apk?dl=0).
+
+
 ## About CheckLists
 The whole idea of **CheckLists** comes from _repeatable_ todo lists.
 A list that can be reset to reuse again instead of adding writing a traditional todo list. This particular list can be restart by the user to repeat the same procedure/number of tasks (represented as items in the list) for next or in later time.
@@ -27,9 +31,6 @@ As a user, I
 ## App Screenshots
 
 ![checklist1](http://i.imgur.com/SqpSdzx.gif)
-
-## DEMO
-Download Apk on your android device from [here](https://www.dropbox.com/s/egmn0bhl28eatcg/CheckLists.apk?dl=0).
 
 ---
 
