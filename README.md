@@ -1,4 +1,6 @@
 # CheckLists
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/amandeepmittal/ionic-checklists.svg)](https://greenkeeper.io/)
 _repo name_: ionic-checklists
 
 ## DEMO
